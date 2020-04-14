@@ -1,44 +1,63 @@
 {
-  "name": "react-boilerplate",
-  "version": "1.0.0",
-  "main": "index.js",
+  "name": "React boilerplate",
+  "version": "2.0.0",
   "license": "MIT",
+  "author": "Paloma Sedeau <paloma.sedeau@gmail.com>",
+  "engines": {
+    "node": ">=10"
+  },
   "scripts": {
-    "start": "webpack-dev-server",
-    "test": "eslint app && jest && jest --coverage",
-    "build": "webpack -p"
+    "prettier": "prettier --write 'src/**/*.{js}'",
+    "prettier:watch": "onchange 'src/**/*.{js}' -- prettier --write {{changed}}",
+    "lint": "eslint --ext .js --max-warnings 0 src",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "storybook": "start-storybook",
+    "start": "node src/server/index.js",
+    "build": "webpack --mode production"
   },
   "dependencies": {
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "express": "^4.17.1",
+    "minimist": "^1.2.5",
+    "moment": "^2.24.0",
+    "opn": "^6.0.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-redux": "^7.2.0",
+    "redux": "^4.0.5",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0",
+    "styled-components": "^5.1.0"
   },
   "devDependencies": {
-    "babel-core": "^6.24.0",
-    "babel-eslint": "^7.2.1",
-    "babel-jest": "^19.0.0",
-    "babel-loader": "^6.4.1",
-    "babel-preset-es2015": "^6.24.0",
-    "babel-preset-react": "^6.23.0",
-    "babel-register": "^6.24.1",
-    "css-loader": "^0.27.3",
-    "eslint": "^3.18.0",
-    "eslint-loader": "^1.7.0",
-    "eslint-plugin-react": "^6.10.3",
-    "extract-text-webpack-plugin": "^2.1.0",
-    "html-webpack-plugin": "^2.28.0",
-    "jest": "^19.0.2",
-    "path": "^0.12.7",
-    "postcss": "^5.2.17",
-    "postcss-loader": "^1.3.3",
-    "react-test-renderer": "^15.5.4",
-    "style-loader": "^0.16.0",
-    "webpack": "^2.3.1",
-    "webpack-dev-server": "^2.4.2"
-  },
-  "jest": {
-    "moduleDirectories": [
-      "node_modules",
-      "app"
-    ]
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "@babel/preset-react": "^7.9.4",
+    "@storybook/react": "^5.3.18",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.1.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "enzyme-to-json": "^3.4.4",
+    "eslint": "^6.8.0",
+    "eslint-loader": "^4.0.0",
+    "eslint-plugin-jest": "^23.8.2",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react-hooks": "^3.0.0",
+    "fetch-mock": "^9.3.1",
+    "html-webpack-plugin": "^4.0.4",
+    "jest": "^25.2.7",
+    "jest-date-mock": "^1.0.8",
+    "onchange": "^6.1.0",
+    "prettier": "^2.0.4",
+    "prettier-loader": "^3.3.0",
+    "redux-mock-store": "^1.5.4",
+    "storybook": "^5.3.18",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-middleware": "^3.7.2",
+    "webpack-hot-middleware": "^2.25.0"
   }
 }
