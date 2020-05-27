@@ -78,7 +78,7 @@ React components are located in a `components/` folder. Components are organized
 
 #### 4. Tests
 
-Project is uses Jest and Enzyme. Available tests scripts :
+Project uses Jest and Enzyme. Available tests scripts :
 
 ```bash
 yarn test
