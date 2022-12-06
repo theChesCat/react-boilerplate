@@ -17,7 +17,7 @@
     "build": "webpack --mode production"
   },
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "minimist": "^1.2.5",
     "moment": "^2.24.0",
     "opn": "^6.0.0",
